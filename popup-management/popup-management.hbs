@@ -1,0 +1,111 @@
+<style>
+
+.paddings {
+    padding-left: 2%;
+}
+
+.heading {
+    font-size: medium;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+div.scrolling {
+    height: 625px;
+}
+#content{
+    overflow-y: scroll;
+    padding-bottom: 20px;
+}
+.field-margin {
+    margin-top: 20px;
+    clear: both;
+}
+
+</style>
+<div class="headerpane">
+<div align="left" class="heading">{{str 'LBL_POPUP_MANAGEMENT_HEADING' 'Leads'}}</div> 
+</div>
+<br/>
+
+<div style="margin-top: 50px; overflow: hidden;">
+{{#with popup_status}}
+    <span class="span4 record-cell record-edit clear-space field-margin"  data-type="{{type}}" data-name="{{name}}">
+       <span class="table-cell-wrapper">
+           <span class="record-label label-record" data-name="{{name}}">{{vname}}</span>
+             <span class="index{{index}}" data-fieldname="{{name}}" data-index="{{index}}">
+                {{field  ../this model=../this.model template="edit"}}
+            </span>
+        </span>
+    </span>
+{{/with}}
+
+<br/><br/>
+
+{{#with popup_visibility_start}}
+    <span class="span4 record-cell record-edit clear-space field-margin"  data-type="{{type}}" data-name="{{name}}">
+       <span class="table-cell-wrapper">
+           <span class="record-label label-record" data-name="{{name}}">{{vname}}</span>
+             <span class="index{{index}}" data-fieldname="{{name}}" data-index="{{index}}">
+                {{field  ../this model=../this.model template="edit"}}
+            </span>
+        </span>
+    </span>
+{{/with}}
+
+<br/><br/>
+
+{{#with popup_visibility_end}}
+    <span class="span4 record-cell record-edit clear-space field-margin"  data-type="{{type}}" data-name="{{name}}">
+       <span class="table-cell-wrapper">
+           <span class="record-label label-record" data-name="{{name}}">{{vname}}</span>
+             <span class="index{{index}}" data-fieldname="{{name}}" data-index="{{index}}">
+                {{field  ../this model=../this.model template="edit"}}
+            </span>
+        </span>
+    </span>
+{{/with}}
+
+<br/><br/>
+
+{{#with popup_one_duration}}
+    <span class="span4 record-cell record-edit clear-space field-margin"  data-type="{{type}}" data-name="{{name}}">
+       <span class="table-cell-wrapper">
+           <span class="record-label label-record" data-name="{{name}}">{{vname}}</span>
+             <span class="index{{index}}" data-fieldname="{{name}}" data-index="{{index}}">
+                {{field  ../this model=../this.model template="edit"}}
+            </span>
+        </span>
+    </span>
+{{/with}}
+
+<br/><br/>
+<!--
+CRED-1200: On-Screen-Alert for New-Lead-Notification (After first reminder pop-up will be shown each minutes)
+{{#with popup_two_duration}}
+    <span class="span4 record-cell record-edit clear-space field-margin"  data-type="{{type}}" data-name="{{name}}">
+       <span class="table-cell-wrapper">
+           <span class="record-label label-record" data-name="{{name}}">{{vname}}</span>
+             <span class="index{{index}}" data-fieldname="{{name}}" data-index="{{index}}">
+                {{field  ../this model=../this.model template="edit"}}
+            </span>
+        </span>
+    </span>
+{{/with}}
+-->
+{{#with popup_days}}
+    <span class="span4 record-cell record-edit clear-space field-margin"  data-type="{{type}}" data-name="{{name}}">
+       <span class="table-cell-wrapper">
+           <span class="record-label label-record" data-name="{{name}}">{{vname}}</span>
+             <span class="index{{index}}" data-fieldname="{{name}}" data-index="{{index}}">
+                {{field  ../this model=../this.model template="edit"}}
+            </span>
+        </span>
+    </span>
+{{/with}}
+
+</div>
+
+<div class="span12 record-cell" style="margin-top: 20px;margin-left:10px">
+    &nbsp;<a class="rowaction btn btn-primary" href="javascript:void(0);" id="save_params" style="width: 8%;">
+    {{str 'LBL_SAVE' 'Leads'}}</a>
+</div>
